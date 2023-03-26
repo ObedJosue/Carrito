@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontrá la pc ideal al mejor precio: Gamer / Home / Work - Comprá seguro">
+    <title>Tecnologia y Equipos | todo Gamer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="shortcut icon" href="../assets/img/icons/consola.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script defer src="/script.js"></script>
+</head>
+<body class="BodyProducts">
+    <div class="contenProducts">
+    <nav class="navbar">
+        <img class="menu_mobile" src="./assets/img/menu.png" alt="play zone">
+        <ul >
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/index.html">ABOUT</a></li>
+            <li><a class="items_home" href="/index.html">PRODUCTS</a></li>
+            <li><a href="/index.html">NEWSLETTERS</a></li>
+            <li><a href="/index.html">CONTACTS</a></li>
+        </ul>          
+        <form class="search1" action="" id="login-form">                              
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <input class="icon_menu" type="image" src="./assets/img/usuario.png" alt="carrito" onclick="submitLoginForm();">
+            <span id="user-welcome"></span>
+            <a href="#" id="mostrar-carrito">
+                <img class="icon_menu" src="./assets/img/anadir-al-carrito.png" alt="imagen de carrito">
+            </a>
+            <div id="carrito-modal" class="modal">
+                <div class="modal-contenido">
+                  <div class="modal-cabecera">
+                    <button id="vaciar-carrito">Vaciar Carrito</button>
+                    <button id="cerrar-carrito">&times;</button>                    
+                  </div>
+                  <div class="modal-cuerpo">
+                  </div>
+                  <div class="modal-cabecera modal-footer">
+                    <button id="pagar-carrito" class="btn-pagar">Pagar</button>             
+                  </div>
+                  
+                </div>
+            </div>            
+        </form>     
+    </nav>
+
+    <main class="productos"> 
+            <div class="producto" id="articulo1">
+                <div class="producto1 borde">
+                    <h2>MICE</h2>
+                    <span class="subtitleP">MICE</span>
+                    <p>PRICE 50$</p>
+                    <button type="button" class="btn-primary" onclick="addToCart('MICE', 50)">BUY NOW</button>
+                </div>
+                <img class="imagen_productos" src="./assets/img/Designing High-Performance Gaming Gear.jpg" alt="mouse ratones">
+            </div>
+            <div class="producto" id="articulo2">
+                <div class="producto1 borde">
+                    <h2>MOUSE</h2>
+                    <span class="subtitleP">MOUSE</span>
+                    <p>PRICE 43$</p>
+                    <button type="button" class="btn-primary" onclick="addToCart('MOUSE', 43)">BUY NOW</button>
+                </div>
+                <img class="imagen_productos" src="./assets/img/Designing High-Performance Gaming Gear.jpg" alt="mouse ratones">
+            </div>
+            <div class="producto" id="articulo3">
+                <div class="producto1 borde">
+                    <h2>KEYBOARDS</h2>
+                    <span class="subtitleP">KEYBOARDS</span>
+                    <p>PRICE 49$</p>
+                    <button type="button" class="btn-primary" onclick="addToCart('KEYBOARDS', 49)">BUY NOW</button>
+                </div>
+                <img class="imagen_productos" src="./assets/img/This is my all black keyboard and I think it's sexy.jpg" alt="keyboards teclados">
+            </div> 
+            <div class="producto" id="articulo4">
+                <div class="producto1 borde">
+                    <h2>TABLE</h2>
+                    <span class="subtitleP">TABLE</span>
+                    <p>PRICE  75$</p>
+                    <button type="button" class="btn-primary" onclick="addToCart('TABLE', 75)">BUY NOW</button>
+                </div>
+                <img class="imagen_productos" src="./assets/img/This is my all black keyboard and I think it's sexy.jpg" alt="keyboards teclados">                                        
+            </div>    
+            <div class="producto" id="articulo5">
+                <div class="producto1 borde">
+                    <h2>MOUSEPADS</h2>
+                    <span class="subtitleP">MOUSEPADS</span>
+                    <p>PRICE  45$</p>
+                    <button type="button" class="btn-primary" onclick="addToCart('MOUSEPADS', 45)">BUY NOW</button>
+                </div>   
+                <img class="imagen_productos" src="./assets/img/ENHANCE_Pathogen_XXL_Gaming_Mouse_Pad_in_Galaxy_and_Black.png" alt="mousepads pads">                                             
+            </div>    
+            <div class="producto" id="articulo6">
+                <div class="producto1 borde">
+                    <h2>HEADSETS</h2>
+                    <span class="subtitleP">HEADSETS</span>
+                    <p>PRICE  110$</p>
+                    <button type="button" class="btn-primary" onclick="addToCart('HEADSETS', 110)">BUY NOW</button> 
+                </div> 
+                <img class="imagen_productos" src="./assets/img/NuraNow – wireless earbuds on a monthly subscription.png" alt="audifonos headsets">                                    
+            </div>  
+
+        <div class="producto2">
+            <div class="producto2a">
+                <div class="producto2b borde" id="articulo7">
+                    <img class="imagen_productos1" src="./assets/img/Teclado_Gamer_Steelseries_Apex_5_Rgb.png" alt="future gears">
+                    <h2>FUTURE GEARS</h2>
+                    <p>PRICE  55$</p>
+                    <button type="button" class="btn-primary" onclick="addToCart('KEYBOARDS RGB', 55)">BUY NOW</button>                             
+                </div>
+                <div class="producto2b borde" id="articulo8">
+                    <img class="imagen_productos1" src="./assets/img/Aerocool_Bolt_A_-_V1_Acryl_Glass_Case_Middle_Tower.png" alt="productos modernos gamer">
+                    <h2 class="">FUTURE GEARS</h2>
+                    <p>PRICE  60$</p>
+                    <button type="button" class="btn-primary"onclick="addToCart('CASE RGB', 60)">BUY NOW</button>                                   
+                </div>
+            </div>
+            <div class="producto2a">
+                <div class="producto2b borde" id="articulo9">
+                    <img class="imagen_productos1" src="./assets/img/Gaming_Mice_-_Wireless__PC__Wired___Logitech.png" alt="productos actuales gamer">
+                    <h2>FUTURE GEARS</h2>
+                    <p>PRICE 79$ </p>
+                    <button type="button" class="btn-primary" onclick="addToCart('LOGITECH', 79)">BUY NOW</button>                                                            
+                </div> 
+                <div class="producto2b borde" id="articulo10">
+                    <img class="imagen_productos1" src="./assets/img/Gaming_Headset_for_PS4_Gaming_Headset_PC_Gaming_Headset_Stereo_PS4_Headphones_with_Mic_LED.png" alt="tecnologia gamer">
+                    <h2>FUTURE GEARS</h2>
+                    <p>PRICE  90$ </p>
+                    <button type="button" class="btn-primary" onclick="addToCart('RGB HEADSETS', 90)">BUY NOW</button>                                   
+                </div> 
+            </div>         
+        </div>
+
+        <div class="producto">
+            <div class="producto1 borde">
+                <h2 class="titlepro">GEAR TEST</h2>
+                <p><span class="subtitleP">GEAR TEST</span> <br> by ProGammers</p>
+                <button type="button" class="btn">WATCH VIDEOS</button>
+            </div>
+            <img class="imagen_productos" src="./assets/img/player3.jpg" alt="consejos tips gamer">                                     
+        </div>    
+        <div class="producto">
+            <div class="producto1 borde">
+                <h2 class="titlepro">GAME TIPS</h2>
+                <p> <span class="subtitleP">GAME TIPS</span> <br> Thanks to Pros</p>
+                <button type="button" class="btn">WATCH VIDEOS</button>
+            </div> 
+            <img class="imagen_productos" src="./assets/img/player2.png" alt="videos testeos gamer">                                    
+        </div>                       
+    </main>
+    <footer class="footerN">
+        <div class="footer_home">
+            <div class="footer1">
+                <img class="icono" src="./assets/img/consola.png" alt="mando">
+                <p>© 2022 Company, Inc</p>
+            </div>
+            <div class="footer2">
+                <a href="/index.html">HOME</a>
+                    <a href="/index.html">ABOUT</a>
+                    <a href="/index.html">PRODUCTS</a>
+                    <a href="/index.html">NEWSLETTERS</a>
+                    <a href="/index.html">CONTACTS</a>
+            </div>
+            <div class="footer3">
+                <i class="fa-brands fa-discord"></i>
+                <i class="fa-brands fa-twitch"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>                                   
+            </div>
+        </div>           
+    </footer>
+    </div> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>    
+</body>
+</html>
