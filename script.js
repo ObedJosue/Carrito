@@ -31,7 +31,6 @@ function addToCart(producto, precio, cantidad) {
     renderCart();
 }
 
-
 function renderCart() {
   let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
   let modalCuerpo = document.querySelector('#carrito-modal .modal-cuerpo');
@@ -72,7 +71,6 @@ function renderCart() {
     </div>
   `;
   modalCuerpo.innerHTML += totalHTML;
-
 
   let botonesEliminar = document.querySelectorAll('.btn-eliminar');
   botonesEliminar.forEach((boton) => {
@@ -122,7 +120,6 @@ function renderCart() {
     document.querySelector('#carrito-modal').classList.remove('mostrar');
   });
   
-
   document.querySelector('#pagar-carrito').addEventListener('click', () => {
     swal({
       title: 'Confirmar compra',
