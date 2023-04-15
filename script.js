@@ -135,3 +135,31 @@ function renderCart() {
       }
     });
   });
+
+  document.querySelector(".icon_menu").addEventListener("click", autenticar);
+
+  function autenticar() {
+    const email = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    fetch("data.json")
+      .then(response => response.json())
+      .then(data => {
+        const usuario = data.usuarios.find(u => u.email === email && u.contraseña === password);
+        if (usuario) {
+          Swal.fire({
+            title: `¡Bienvenido!`,
+            icon: 'success',
+            timer: 3000,
+            timerProgressBar: true
+          });
+        } else {
+          Swal.fire({
+            title: "Credenciales inválidas",
+            icon: 'error',
+            timer: 3000,
+            timerProgressBar: true
+          });
+        }        
+      });
+  }
+  
